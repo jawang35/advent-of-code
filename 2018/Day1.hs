@@ -15,7 +15,7 @@ findDuplicate xs = findDuplicate' Set.empty 0 xs where
 
 main :: IO ()
 main = do
-    changes <- map parseChange . lines <$> readFile "inputs/day1.txt"
+    changes <- map parseChange . lines <$> readFile "sampleinputs/day1.txt"
     let part1 = sum changes
     let part2 = fromJust $ findDuplicate $ cycle changes
     putStrLn $ "Part 1: " ++ show part1
