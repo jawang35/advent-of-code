@@ -5,16 +5,15 @@ if __name__ == '__main__':
         part1 = sum(changes)
         print('Part 1: {}'.format(part1))
 
+        part2 = 0
         frequencies = set()
-        frequency = 0
         i = 0
         length = len(changes)
         while True:
-            if frequency in frequencies:
-                print(i)
-                print('Part 2: {}'.format(frequency))
+            if part2 in frequencies:
                 break
-            frequencies.add(frequency)
-            frequency += changes[i % length]
+            frequencies.add(part2)
+            part2 += changes[i % length]
             i += 1
 
+        print('Part 2: {}'.format(part2))
