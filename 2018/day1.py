@@ -1,7 +1,7 @@
 if __name__ == '__main__':
     with open('sampleinputs/day1.txt') as file:
-        changes = [int(line if line[0] != '+' else line[1:])
-                   for line in file.read().split()]
+        changes = [int(i) for i in file.read().split()]
+
         part1 = sum(changes)
         print('Part 1: {}'.format(part1))
 
