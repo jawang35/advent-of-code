@@ -9,6 +9,7 @@ class Claim():
         self.width = int(dimensions[0])
         self.height = int(dimensions[1])
 
+
 def required_sheet_size(claims):
     width = 0
     height = 0
@@ -16,6 +17,7 @@ def required_sheet_size(claims):
         width = max(width, claim.left + claim.width)
         height = max(height, claim.top + claim.height)
     return width, height
+
 
 def total_overlap(claims):
     size = required_sheet_size(claims)
@@ -36,6 +38,7 @@ def total_overlap(claims):
 
     return overlap_size
 
+
 def is_overlapping(claim1, claim2):
     if claim1.left < claim2.left and claim1.left + claim1.width <= claim2.left:
         return False
@@ -47,6 +50,7 @@ def is_overlapping(claim1, claim2):
         return False
     return True
 
+
 def intact(claims):
     claims_with_overlaps = set()
     for i, claim1 in enumerate(claims):
@@ -57,6 +61,7 @@ def intact(claims):
 
         if claim1.id not in claims_with_overlaps:
             return claim1
+
 
 if __name__ == '__main__':
     with open('2018/sampleinputs/day3.txt') as file:

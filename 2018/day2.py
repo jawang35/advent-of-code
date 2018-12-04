@@ -15,12 +15,14 @@ def checksum(ids):
             triples += 1
     return doubles * triples
 
+
 def common(string1, string2):
     result = ''
     for i, char1 in enumerate(string1):
         if char1 == string2[i]:
             result += char1
     return result
+
 
 def correct_ids_common(ids):
     for i, id1 in enumerate(ids):
@@ -30,6 +32,7 @@ def correct_ids_common(ids):
         correct = next(( c for c in commons if len(c) == correct_length ), None)
         if correct:
             return correct
+
 
 if __name__ == '__main__':
     with open('2018/sampleinputs/day2.txt') as file:
