@@ -1,5 +1,5 @@
 if __name__ == '__main__':
-    with open('sampleinputs/day1.txt') as file:
+    with open('2018/sampleinputs/day1.txt') as file:
         changes = [int(i) for i in file.read().split()]
 
         part1 = sum(changes)

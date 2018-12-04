@@ -59,7 +59,7 @@ def intact(claims):
             return claim1
 
 if __name__ == '__main__':
-    with open('sampleinputs/day3.txt') as file:
+    with open('2018/sampleinputs/day3.txt') as file:
         claims = [Claim(c) for c in file.read().split('\n')[:-1]]
 
         part1 = total_overlap(claims)

@@ -32,7 +32,7 @@ def correct_ids_common(ids):
             return correct
 
 if __name__ == '__main__':
-    with open('sampleinputs/day2.txt') as file:
+    with open('2018/sampleinputs/day2.txt') as file:
         ids = file.read().split()
         part1 = checksum(ids)
         part2 = correct_ids_common(ids)
