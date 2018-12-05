@@ -2,17 +2,15 @@ import string
 
 
 def react(polymer):
-    while True:
-        initial_length = len(polymer)
-        cursor = 0
-        while cursor < len(polymer) - 1:
-            current_unit = polymer[cursor]
-            next_unit = polymer[cursor + 1]
-            if current_unit.lower() == next_unit.lower() and current_unit != next_unit:
-                del polymer[cursor:(cursor + 2)]
+    cursor = 0
+    while cursor < len(polymer) - 1:
+        current_unit = polymer[cursor]
+        next_unit = polymer[cursor + 1]
+        if current_unit.lower() == next_unit.lower() and current_unit != next_unit:
+            del polymer[cursor:(cursor + 2)]
+            cursor = max(cursor - 1, 0)
+        else:
             cursor += 1
-        if len(polymer) == initial_length:
-            break
     return polymer
 
 
