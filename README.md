@@ -5,6 +5,7 @@ Solutions to [Advent of Code](https://adventofcode.com/).
 ## Haskell
 
 ```sh
+$ stack build
 $ stack runghc [year]/Day[1-25].hs
 ```
 
