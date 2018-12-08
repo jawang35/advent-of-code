@@ -6,9 +6,6 @@ class Step():
         self.label = label
         self.execution_time = ord(label) - ord('A') + base_execution_time + 1
 
-    def __repr__(self):
-        return '{}:{}'.format(self.label, self.execution_time)
-
     def __gt__(self, other_step):
         return self.label > other_step.label
 
