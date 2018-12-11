@@ -34,7 +34,6 @@ def draw(points):
     for point in points:
         plane[point.position[1] - top][point.position[0] - left] = True
 
-    print('Part 1:')
     for row in plane:
         print(['X' if point else ' ' for point in row])
 
@@ -63,5 +62,6 @@ if __name__ == '__main__':
         points = [Point([int(value) for value in point_regex.findall(line)])
                   for line in file.read().strip().split('\n')]
 
+        print('Part 1:')
         seconds = move_until_message_appears(points)
         print('Part 2: {}'.format(seconds))

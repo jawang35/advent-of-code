@@ -26,6 +26,7 @@ if __name__ == '__main__':
         polymer = file.read().strip()
 
         part1 = len(react(list(polymer)))
-        part2 = length_fixed_polymer_reaction(polymer)
         print('Part 1: {}'.format(part1))
+
+        part2 = length_fixed_polymer_reaction(polymer)
         print('Part 2: {}'.format(part2))

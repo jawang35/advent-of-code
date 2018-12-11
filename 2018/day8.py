@@ -27,7 +27,9 @@ if __name__ == '__main__':
         tree_input = [int(n) for n in file.read().strip().split(' ')]
 
         tree = Tree(deque(tree_input))
+
         part1 = tree.sum_metadata_entries()
-        part2 = tree.root_value()
         print('Part 1: {}'.format(part1))
+
+        part2 = tree.root_value()
         print('Part 2: {}'.format(part2))

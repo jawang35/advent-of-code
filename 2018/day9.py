@@ -42,5 +42,6 @@ if __name__ == '__main__':
 
         part1 = max(play(players, last_marble))
         print('Part 1: {}'.format(part1))
+
         part2 = max(play(players, 100 * last_marble))
         print('Part 2: {}'.format(part2))

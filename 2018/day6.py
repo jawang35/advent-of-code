@@ -72,6 +72,7 @@ if __name__ == '__main__':
                        for line in file.read().strip().split('\n')]
 
         part1 = largest_dangerous_area(coordinates)
-        part2 = area_safe_region(coordinates)
         print('Part 1: {}'.format(part1))
+
+        part2 = area_safe_region(coordinates)
         print('Part 2: {}'.format(part2))

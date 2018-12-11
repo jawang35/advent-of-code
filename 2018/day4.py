@@ -50,10 +50,11 @@ if __name__ == '__main__':
         records = sorted([Record(r) for r in file.read().split('\n')[:-1]], key=lambda r: r.timestamp)
 
         sleep_log = build_sleep_log(records)
-        sleeping_beauty1, log1 = sorted(sleep_log.items(), key=lambda x: x[1]['time_asleep'], reverse=True)[0]
-        sleeping_beauty2, log2 = sorted(sleep_log.items(), key=lambda x: max(x[1]['minutes']), reverse=True)[0]
 
+        sleeping_beauty1, log1 = sorted(sleep_log.items(), key=lambda x: x[1]['time_asleep'], reverse=True)[0]
         part1 = int(sleeping_beauty1) * int(log1['minutes'].index(max(log1['minutes'])))
-        part2 = int(sleeping_beauty2) * int(log2['minutes'].index(max(log2['minutes'])))
         print('Part 1: {}'.format(part1))
+
+        sleeping_beauty2, log2 = sorted(sleep_log.items(), key=lambda x: max(x[1]['minutes']), reverse=True)[0]
+        part2 = int(sleeping_beauty2) * int(log2['minutes'].index(max(log2['minutes'])))
         print('Part 2: {}'.format(part2))

@@ -68,6 +68,7 @@ if __name__ == '__main__':
         claims = [Claim(c) for c in file.read().split('\n')[:-1]]
 
         part1 = total_overlap(claims)
-        part2 = intact(claims).id
         print('Part 1: {}'.format(part1))
+
+        part2 = intact(claims).id
         print('Part 2: {}'.format(part2))

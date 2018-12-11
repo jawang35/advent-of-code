@@ -94,6 +94,7 @@ if __name__ == '__main__':
         instructions = file.read().strip().split('\n')
 
         part1 = ''.join(resolve_step_order(instructions))
-        part2 = execute_instructions(instructions, 5, 60)
         print('Part 1: {}'.format(part1))
+
+        part2 = execute_instructions(instructions, 5, 60)
         print('Part 2: {}'.format(part2))

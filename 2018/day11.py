@@ -45,6 +45,7 @@ if __name__ == '__main__':
     power_grid = build_power_grid(serial_number)
 
     part1, _ = square_with_largest_total_power(power_grid, 3)
-    part2 = largest_total_power_all_sizes(power_grid)
     print('Part 1: {}'.format(part1))
+
+    part2 = largest_total_power_all_sizes(power_grid)
     print('Part 2: ({},{},{})'.format(part2[0][0], part2[0][1], part2[1]))
