@@ -1,22 +1,38 @@
+class Marble():
+    def __init__(self, value, left=None, right=None):
+        self.value = value
+        self.left = left or self
+        self.right = right or self
+
+
 def play(players, last_marble):
     player_points = [0] * players
-    circle = [0]
-    current_position = 0
-    player = 0
-    for marble in range(1, last_marble + 1):
-        if marble % 23 == 0:
-            current_position = (current_position - 7) % len(circle)
-            points = marble + circle.pop(current_position)
-            player_points[player] += points
+    current_marble = Marble(0)
+    for n in range(1, last_marble + 1):
+        if n % 23 == 0:
+            player = (n % players) - 1
+            player_points[player] += n
+
+            # move counter-clockwise 7 marbles
+            for _ in range(7):
+                current_marble = current_marble.left
+
+            # remove marble
+            current_marble.left.right = current_marble.right
+            current_marble.right.left = current_marble.left
+
+            player_points[player] += current_marble.value
+            current_marble = current_marble.right
         else:
-            current_position = (current_position + 2) % len(circle)
-            if current_position == 0:
-                circle.append(marble)
-                current_position = len(circle) - 1
-            else:
-                circle.insert(current_position, marble)
-        player = (player + 1) % players
+            # insert marble between 1 and 2 marbles clockwise
+            left = current_marble.right
+            right = left.right
+            current_marble = Marble(n, left, right)
+            left.right = current_marble
+            right.left = current_marble
+
     return player_points
+
 
 if __name__ == '__main__':
     with open('2018/sampleinputs/day9.txt') as file:
@@ -24,5 +40,7 @@ if __name__ == '__main__':
         players = int(words[0])
         last_marble = int(words[6])
 
-        player_points = play(players, last_marble)
-        print('Part 1: {}'.format(max(player_points)))
+        part1 = max(play(players, last_marble))
+        print('Part 1: {}'.format(part1))
+        part2 = max(play(players, 100 * last_marble))
+        print('Part 2: {}'.format(part2))
