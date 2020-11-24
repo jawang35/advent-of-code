@@ -6,11 +6,11 @@ Solutions to [Advent of Code](https://adventofcode.com/).
 
 ```sh
 $ stack build
-$ stack runghc [year]/Day[1-25].hs
+$ stack runghc [year]/Day[01-25].hs
 ```
 
 ## Python
 
 ```sh
-$ python [year]/day[1-25].py
+$ python [year]/day[01-25].py
 ```
