@@ -28,7 +28,7 @@ findCorrectBoxId (id:ids) = if correct == Nothing
 
 main :: IO ()
 main = do
-    ids <- lines <$> readFile "2018/sampleinputs/day2.txt"
+    ids <- lines <$> readFile "2018/sampleinputs/day02.txt"
     let part1 = checksum ids
     let part2 = fromJust $ findCorrectBoxId ids
     putStrLn $ "Part 1: " ++ show part1

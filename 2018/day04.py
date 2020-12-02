@@ -46,7 +46,7 @@ def build_sleep_log(records):
 
 
 if __name__ == '__main__':
-    with open('2018/sampleinputs/day4.txt') as file:
+    with open('2018/sampleinputs/day04.txt') as file:
         records = sorted([Record(r) for r in file.read().split('\n')[:-1]], key=lambda r: r.timestamp)
 
         sleep_log = build_sleep_log(records)

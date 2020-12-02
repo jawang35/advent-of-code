@@ -15,7 +15,7 @@ def part2(entries):
 
 
 if __name__ == '__main__':
-    with open(os.path.join('inputs', 'day01.txt')) as file:
+    with open(os.path.join('sampleinputs', 'day01.txt')) as file:
         entries = [
             int(entry)
             for entry in file.read().split()

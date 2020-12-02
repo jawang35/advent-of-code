@@ -13,7 +13,7 @@ def valid_password_position(pos1, pos2, char, password):
 
 
 if __name__ == '__main__':
-    with open(os.path.join('inputs', 'day02.txt')) as file:
+    with open(os.path.join('sampleinputs', 'day02.txt')) as file:
         part1 = 0
         part2 = 0
         for line in file:

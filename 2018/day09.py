@@ -35,7 +35,7 @@ def play(players, last_marble):
 
 
 if __name__ == '__main__':
-    with open('2018/sampleinputs/day9.txt') as file:
+    with open('2018/sampleinputs/day09.txt') as file:
         words = file.read().strip().split(' ')
         players = int(words[0])
         last_marble = int(words[6])

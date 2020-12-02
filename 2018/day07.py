@@ -90,7 +90,7 @@ def execute_instructions(instructions, workers, base_execution_time):
 
 
 if __name__ == '__main__':
-    with open('2018/sampleinputs/day7.txt') as file:
+    with open('2018/sampleinputs/day07.txt') as file:
         instructions = file.read().strip().split('\n')
 
         part1 = ''.join(resolve_step_order(instructions))

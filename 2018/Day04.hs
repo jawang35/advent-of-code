@@ -40,7 +40,7 @@ maximumIndex xs = let maxValue = V.maximum xs in fromJust $ V.findIndex ((==) ma
 
 main :: IO ()
 main = do
-    records <- map parseRecord . sort . lines <$> readFile "2018/sampleinputs/day4.txt"
+    records <- map parseRecord . sort . lines <$> readFile "2018/sampleinputs/day04.txt"
     let sleepLog = buildSleepLog 0 Nothing M.empty records
     let (sleepingBeauty1, log1) = head $ sortBy (flip compare `on` (fst . snd)) $ M.toList sleepLog
     let (sleepingBeauty2, log2) = head $ sortBy (flip compare `on` (maximum . snd . snd)) $ M.toList sleepLog

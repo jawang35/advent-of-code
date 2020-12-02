@@ -67,7 +67,7 @@ def largest_dangerous_area(coordinates):
 
 
 if __name__ == '__main__':
-    with open('2018/sampleinputs/day6.txt') as file:
+    with open('2018/sampleinputs/day06.txt') as file:
         coordinates = [tuple([int(x.strip()) for x in line.split(',')])
                        for line in file.read().strip().split('\n')]
 

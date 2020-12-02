@@ -22,7 +22,7 @@ def length_fixed_polymer_reaction(polymer):
 
 
 if __name__ == '__main__':
-    with open('2018/sampleinputs/day5.txt') as file:
+    with open('2018/sampleinputs/day05.txt') as file:
         polymer = file.read().strip()
 
         part1 = len(react(list(polymer)))

@@ -23,7 +23,7 @@ class Tree():
 
 
 if __name__ == '__main__':
-    with open('2018/sampleinputs/day8.txt') as file:
+    with open('2018/sampleinputs/day08.txt') as file:
         tree_input = [int(n) for n in file.read().strip().split(' ')]
 
         tree = Tree(deque(tree_input))
